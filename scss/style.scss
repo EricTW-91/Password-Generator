@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    .generatorBox{
+        // Size, position
+        width: 30vw;
+        height: 80vh;
+        min-height: 500px;
+        margin: 10vh auto;
+        padding: 5vh 0 2vh 0;
+        // Grid
+        display: grid;
+        grid-template-rows: 3fr 2fr 8fr 2fr;
+        place-items: center;
+        grid-gap: 20px;
+        // Style
+        border: 2px black solid;
+        border-radius: 12px;
+        .passwordResult{
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input{
+                width: 90%;
+                height: 80%;
+                font-size: 1.3em;
+                text-align: center;
+            }
+        }
+        .digitsSelect{
+            width: 76%;
+            height: 100%;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            input{
+                grid-column: 1/3;
+            }
+            span{
+                text-align: end;
+            }
+        }
+        .parameterSelect{
+            width: 80%;
+            height: 100%;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            label{
+                font-size: 1.5em;
+            }
+            input{
+                justify-self: flex-end;
+                width: 50px;
+                height: 50px;
+            }
+        }
+        button{
+            font-size: 1.2em;
+            height: 50px;
+            width: 150px;
+        }
+    }
+}

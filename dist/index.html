@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <script src="./script.js" async></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+
+    <div class="generatorBox">
+        <div class="passwordResult">
+            <input type="text" name="" id="resultOutput" value="Password Generator">
+        </div>
+        <div class="digitsSelect">
+            <label for="digitsInput">Numbers of digits</label>
+            <span id="showNumOfDigits"></span>
+            <input type="range" name="digitsInput" id="digitsInput" min="4" max="20" oninput="showVal(this.value)">
+        </div>
+        <div class="parameterSelect">
+            <label for="numberInput">Numbers</label>
+            <input type="checkbox" name="numberInput" id="numberInput" oninput="chosenOptions(this.checked, this.id)">
+            <label for="uppercaseInput">Uppercase</label>
+            <input type="checkbox" name="uppercaseInput" id="uppercaseInput" oninput="chosenOptions(this.checked, this.id)">
+            <label for="lowercaseInput">Lowercase</label>
+            <input type="checkbox" name="lowercaseInput" id="lowercaseInput" oninput="chosenOptions(this.checked, this.id)">
+            <label for="symbolInput">Symbol</label>
+            <input type="checkbox" name="symbolInput" id="symbolInput" oninput="chosenOptions(this.checked, this.id)">
+        </div>
+        <div>
+            <button onclick="generatePW()">Generate</button>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
